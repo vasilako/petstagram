@@ -1,0 +1,24 @@
+<div class="nav-links">
+                <ul class="nav-group">
+                    <li class="nav-item">
+                        <!-- Link to Add Pet Page -->
+                        <a href="{% url 'add pet' %}">
+                            <i>Add Pet</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Link to Add Photo Page -->
+                        <a href="{% url 'add photo' %}">
+                            <i>Add Photo</i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Link to Profile Page -->
+                        <a href="{% url 'details pet' username=None pet_name=None %}">{# TODO: Esto hay que verificarlo #}
+                            <i>Profile</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>

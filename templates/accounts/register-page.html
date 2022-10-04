@@ -1,0 +1,48 @@
+{# Here is the base template #}
+{% extends "base/base.html" %}
+{# Here the dynamic path of the static files is loaded #}
+{% load static %}
+{# In the base template there is a navigation block in this place. Here is included #}
+{% block nav_template %}
+{# There are 2 navigation templates, the default one is included here #}
+{% include "base/nav_defaut.html" %}
+{% endblock %}
+
+
+
+{% block main_content %}
+<!-- Starts Main Section -->
+<main>
+
+    <!-- Start Register Section -->
+    <div class="login-register-div">
+        <div class="login-register-box">
+            <h1>Petstagram</h1>
+
+            <!-- Start Register Form -->
+            <form action="">
+                <input type="text" placeholder="Username">
+
+                <input type="email" placeholder="Email">
+
+                <input type="password" placeholder="Password">
+
+                <input type="password" placeholder="Repeat Password">
+
+                <!-- Register Button -->
+                <button type="submit">Register</button>
+            </form>
+            <!-- End Register Form -->
+
+        </div>
+        <div class="second-option">
+
+            <!-- Link to Login Page -->
+            <p>Have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+    <!-- End Register Section -->
+
+</main>
+<!-- End Main Section -->
+{% endblock %}
