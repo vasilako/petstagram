@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -79,23 +80,23 @@ WSGI_APPLICATION = 'petstagram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lqfxgszz',
-        'USER': 'lqfxgszz',
-        'PASSWORD': 'NeedtMqrwibmiVwSG0k8B-o2VXZxld1z',
-        'HOST': 'jelani.db.elephantsql.com', # Perfil doncho_lunes
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'lqfxgszz',
+#         'USER': 'lqfxgszz',
+#         'PASSWORD': 'NeedtMqrwibmiVwSG0k8B-o2VXZxld1z',
+#         'HOST': 'jelani.db.elephantsql.com', # Perfil doncho_lunes
+#         'PORT': '',
+#     }
+# }
 
 
 
@@ -135,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static', ]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = [BASE_DIR / 'mediafiles']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
