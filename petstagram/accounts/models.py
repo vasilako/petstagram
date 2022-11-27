@@ -1,5 +1,5 @@
 from django.core.exceptions import ValidationError
-from django.core.validators import MinValueValidator, MinLengthValidator
+from django.core.validators import MinLengthValidator
 from django.db import models
 
 # Create your models here.
@@ -36,8 +36,10 @@ class UserProfile(models.Model):
         null=False,
         blank=False,
         validators= [
-            MinLengthValidator(limit_value=LIMIT_LENGHT_NAME,
-                               message=f'Soy MinLengthValidator -> El nombre debe ser al menos {LIMIT_LENGHT_NAME}'),
+            MinLengthValidator(
+                limit_value=LIMIT_LENGHT_NAME,
+                message=f'Soy MinLengthValidator -> El nombre debe ser al menos {LIMIT_LENGHT_NAME}'
+            ),
             only_alpha_validadtor
         ]
     )

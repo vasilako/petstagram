@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -23,5 +24,11 @@ urlpatterns = [
     path('accounts/', include('petstagram.accounts.urls')),
     path('pets/', include('petstagram.pets.urls')),
     path('photos/', include('petstagram.photos.urls')),
-
 ]
+
+# Este ajuste es necesari para que el sevidor de prueda servir los media-files en modo debug True
+from django.conf.urls.static import static
+from petstagram import settings
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
